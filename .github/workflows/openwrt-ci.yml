@@ -28,11 +28,11 @@ jobs:
 
     steps:
 
-      #- name: Checkout
-      #  uses: actions/checkout@master
-      #  with:
-      #    ref: master
-      #
+      - name: Checkout
+        uses: actions/checkout@master
+        with:
+          ref: master
+      
       #- name: Space cleanup
       #  env:
       #    DEBIAN_FRONTEND: noninteractive
@@ -55,10 +55,10 @@ jobs:
 
       #    df -h
 
-      #- name: Update feeds
-      #  run: |
-      #    ./scripts/feeds update -a
-      #    ./scripts/feeds install -a
+      - name: Update feeds
+        run: |
+          ./scripts/feeds update -a
+          ./scripts/feeds install -a
 
       - name: Generate configuration file
         run: |
